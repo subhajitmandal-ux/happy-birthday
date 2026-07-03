@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Baby ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+    #loveLetter{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:80px 20px;
+}
+
+.envelope{
+position:relative;
+width:320px;
+height:220px;
+cursor:pointer;
+}
+
+.back{
+position:absolute;
+width:100%;
+height:100%;
+background:#ff6b81;
+border-radius:10px;
+}
+
+.front{
+position:absolute;
+bottom:0;
+width:100%;
+height:110px;
+background:#ff4d6d;
+clip-path:polygon(0 0,50% 70%,100% 0,100% 100%,0 100%);
+}
+
+.top{
+position:absolute;
+top:0;
+width:100%;
+height:110px;
+background:#ff758f;
+transform-origin:top;
+transition:1s;
+clip-path:polygon(0 0,50% 100%,100% 0);
+}
+
+.letter{
+position:absolute;
+left:20px;
+top:30px;
+width:280px;
+height:170px;
+background:white;
+border-radius:8px;
+padding:20px;
+overflow:auto;
+transform:translateY(50px);
+transition:1s;
+z-index:2;
+}
+
+.heart{
+position:absolute;
+top:85px;
+left:50%;
+transform:translateX(-50%);
+font-size:35px;
+z-index:5;
+}
+
+.open .top{
+transform:rotateX(180deg);
+}
+
+.open .letter{
+transform:translateY(-120px);
+}
+
+#typedLetter{
+white-space:pre-line;
+font-size:16px;
+line-height:1.7;
+color:#444;
+}
+
+#tapText{
+margin-top:20px;
+color:white;
+font-size:18px;
+}
+#cakeContainer{
+text-align:center;
+margin:80px 0;
+}
+
+#cake{
+position:relative;
+width:220px;
+margin:auto;
+}
+
+.cake-top{
+width:220px;
+height:45px;
+background:#ffb6c1;
+border-radius:15px;
+}
+
+.cake-bottom{
+width:240px;
+height:90px;
+background:#ff69b4;
+border-radius:0 0 20px 20px;
+margin-left:-10px;
+}
+
+.candles{
+display:flex;
+justify-content:space-around;
+margin-bottom:-5px;
+}
+
+.candle{
+width:12px;
+height:45px;
+background:white;
+position:relative;
+cursor:pointer;
+}
+
+.flame{
+width:14px;
+height:18px;
+background:gold;
+border-radius:50%;
+position:absolute;
+top:-18px;
+left:-1px;
+animation:flicker .3s infinite alternate;
+}
+
+@keyframes flicker{
+from{transform:scale(1);}
+to{transform:scale(1.2);}
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff5f9e,#ffb6d9,#ffd6e8);
+overflow-x:hidden;
+color:white;
+}
+
+/* Floating Hearts */
+
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:25px;
+animation:float 10s linear infinite;
+opacity:.8;
+pointer-events:none;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:70px;
+text-shadow:0 0 20px #ff0077;
+animation:glow 2s infinite alternate;
+}
+
+.hero h2{
+margin-top:20px;
+font-size:28px;
+font-weight:300;
+}
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 10px #fff;
+}
+
+to{
+text-shadow:0 0 30px #ff0088;
+}
+
+}
+
+button{
+
+margin-top:40px;
+padding:18px 40px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff2d75;
+cursor:pointer;
+transition:.4s;
+font-weight:bold;
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+/* Sections */
+
+section{
+
+padding:80px 20px;
+
+}
+
+.title{
+
+font-size:45px;
+
+text-align:center;
+
+margin-bottom:40px;
+
+font-family:'Great Vibes',cursive;
+
+}
+
+/* Gallery */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.gallery img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 0 20px rgba(255,255,255,.4);
+
+transition:.4s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* Letter */
+
+.letter{
+
+max-width:900px;
+
+margin:auto;
+
+background:rgba(255,255,255,.15);
+
+padding:40px;
+
+border-radius:25px;
+
+backdrop-filter:blur(15px);
+
+font-size:20px;
+
+line-height:2;
+
+}
+
+/* Countdown */
+
+.countdown{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.box{
+
+background:white;
+
+color:#ff2d75;
+
+padding:20px;
+
+width:120px;
+
+border-radius:20px;
+
+font-size:40px;
+
+font-weight:bold;
+
+}
+
+.box span{
+
+display:block;
+
+font-size:18px;
+
+margin-top:10px;
+
+}
+
+/* Surprise */
+
+#surprise{
+
+display:none;
+
+font-size:40px;
+
+text-align:center;
+
+padding:80px 20px;
+
+animation:fade 2s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+footer{
+
+padding:50px;
+
+text-align:center;
+
+font-size:22px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<div class="hero">
+
+<h1>Happy Birthday Baby ❤️</h1>
+
+<h2>To My Beautiful Nisha 💖</h2>
+
+<button onclick="document.getElementById('gallery').scrollIntoView()">
+Open My Surprise 🎁
+</button>
+
+</div>
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+<h2 class="title">📸 Our Beautiful Memories ❤️</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg" alt="">
+<img src="photo2.jpg" alt="">
+<img src="photo3.jpg" alt="">
+<img src="photo4.jpg" alt="">
+<img src="photo5.jpg" alt="">
+<img src="photo6.jpg" alt="">
+
+</div>
+
+</section>
+
+<!-- ================= LOVE LETTER ================= -->
+<section id="loveLetter">
+<div class="envelope" onclick="openEnvelope()">
+    <div class="back"></div>
+    
+    <div class="letter">
+        "Dear Baby ❤️,
+        Happy Birthday to My truly special person, My Baby, My Love ❤️! 🎂You are Sweet, Loyal, My love, and I am so grateful to have you in my life. You bring so much warmth and sweetness into my life. Every moment with you is precious.\n\nOn your special day, I wish you all the happiness, love, and joy that you deserve. May this year bring you countless beautiful and wonderful memories (of course with me also 🙃).Another year older, but definitely not wiser! 😄 So glad I get to be goofy and crazy with you. Once again... ❤️ Happy Birthday Baby ❤️ 🧑‍🤝‍🧑👑 Here to celebrating you today and always! 🎉 With love and best wishes,Your most precious & favourite person ❤️ Arnab ❤️";
+    
+    </div>
+
+    <div class="front"></div>
+    <div class="top"></div>
+    <div class="heart">❤️</div>
+</div>
+
+<p id="tapText">💌 Tap the envelope, Baby</p>
+
+</section>
+<!-- ================= COUNTDOWN ================= -->
+
+<section id="countdown">
+
+<h2 class="title">⏳ Countdown to Your Birthday</h2>
+
+<div class="countdown">
+
+<div class="box">
+<div id="days">0</div>
+<span>Days</span>
+</div>
+
+<div class="box">
+<div id="hours">0</div>
+<span>Hours</span>
+</div>
+
+<div class="box">
+<div id="minutes">0</div>
+<span>Minutes</span>
+</div>
+
+<div class="box">
+<div id="seconds">0</div>
+<span>Seconds</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SURPRISE ================= -->
+
+<section>
+
+<h2 class="title">🎁 One Last Surprise</h2>
+
+<div style="text-align:center;">
+
+<button onclick="showLove()">
+Click Here Baby ❤️
+</button>
+
+</div>
+
+<div id="surprise">
+
+<h1>I Love You Forever ❤️</h1>
+
+<h2>Happy Birthday My Baby 🎂</h2>
+
+<p style="margin-top:20px;font-size:24px;">
+
+No matter what happens...
+
+No matter where life takes us...
+
+I'll always choose YOU.
+
+Always.
+
+Forever.
+
+❤️
+
+</p>
+
+</div>
+
+</section>
+    
+
+<footer>
+
+Made with ❤️ by <b>Arnab</b>
+<section style="text-align:center;padding:80px 20px;">
+
+<h2 class="title">💖 One More Surprise 💖</h2>
+
+<button onclick="showReasons()">
+❤️ Click Me Baby ❤️
+</button>
+
+<div id="reasonBox" style="
+display:none;
+margin-top:40px;
+padding:30px;
+background:rgba(255,255,255,.2);
+border-radius:20px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+font-size:22px;
+line-height:1.8;
+">
+
+<h2>I Love You Because... ❤️</h2>
+
+<p id="reasonText"></p>
+
+</div>
+
+</section>
+</footer>
+
+<script>
+    // Look for a variable that holds your message text (it might be called 'text', 'message', or 'words')
+const birthdayMessage = "Dear Baby ❤️,\n\nHappy Birthday to My truly special person, My Baby, My Love ❤️! 🎂\n\nYou are Sweet, Loyal, My love, and I am so grateful to have you in my life. You bring so much warmth and sweetness into my life. Every moment with you is precious.\n\nOn your special day, I wish you all the happiness, love, and joy that you deserve. May this year bring you countless beautiful and wonderful memories (of course with me also 🙃).\n\nAnother year older, but definitely not wiser! 😄\n\nSo glad I get to be goofy and crazy with you. Once again... ❤️ Happy Birthday Baby ❤️ 🧑‍🤝‍🧑👑\n\nHere to celebrating you today and always! 🎉 With love and best wishes,\n\nYour most precious & favourite person ❤️ Arnab ❤️";
+    
+
+let started=false;
+
+function openEnvelope(){
+
+if(started) return;
+
+started=true;
+
+document.querySelector(".envelope").classList.add("open");
+
+setTimeout(typeLetter,900);
+
+}
+
+function typeLetter(){
+
+let i=0;
+
+let speed=35;
+
+function typing(){
+
+if(i<message.length){
+
+document.getElementById("typedLetter").innerHTML+=message.charAt(i);
+
+i++;
+
+setTimeout(typing,speed);
+
+}
+
+}
+
+typing();
+
+}
+let blown = 0;
+
+function blow(candle){
+
+if(candle.classList.contains("done")) return;
+
+candle.classList.add("done");
+
+candle.querySelector(".flame").style.display="none";
+
+blown++;
+
+if(blown===3){
+
+document.getElementById("wishText").innerHTML =
+"🎉 Happy Birthday Baby ❤️<br>I Love You Forever 💖";
+
+confetti();
+}
+
+}
+
+function confetti(){
+
+for(let i=0;i<120;i++){
+
+let c=document.createElement("div");
+
+c.innerHTML="🎊";
+
+c.style.position="fixed";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.top="-20px";
+
+c.style.fontSize=(20+Math.random()*20)+"px";
+
+c.style.transition="5s linear";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.style.top="110vh";
+},100);
+
+setTimeout(()=>{
+c.remove();
+},5000);
+
+}
+
+}
+// Countdown
+
+const birthday = new Date("July 16, 2026 00:00:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = birthday - now;
+
+const d = Math.floor(distance/(1000*60*60*24));
+
+const h = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const m = Math.floor((distance%(1000*60*60))/(1000*60));
+
+const s = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=d;
+document.getElementById("hours").innerHTML=h;
+document.getElementById("minutes").innerHTML=m;
+document.getElementById("seconds").innerHTML=s;
+
+},1000);
+
+
+// Floating Hearts
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+heart.style.animationDuration=(6+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},10000);
+
+}
+
+setInterval(createHeart,400);
+
+
+// Surprise
+
+function showLove(){
+
+document.getElementById("surprise").style.display="block";
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+alert("Happy Birthday Baby ❤️");
+
+}
+/* ================= BACKGROUND MUSIC ================= */
+
+// Replace "music.mp3" with your own song file
+const bgMusic = new Audio("music.mp3");
+bgMusic.loop = true;
+
+const musicBtn = document.createElement("button");
+musicBtn.innerHTML = "🎵 Play Music";
+musicBtn.style.position = "fixed";
+musicBtn.style.bottom = "20px";
+musicBtn.style.right = "20px";
+musicBtn.style.zIndex = "9999";
+musicBtn.style.padding = "12px 20px";
+musicBtn.style.border = "none";
+musicBtn.style.borderRadius = "30px";
+musicBtn.style.cursor = "pointer";
+
+document.body.appendChild(musicBtn);
+
+musicBtn.onclick = function () {
+    bgMusic.play();
+    musicBtn.innerHTML = "❤️ Music Playing";
+};
+
+/* ================= CONFETTI ================= */
+
+function confetti() {
+
+    for (let i = 0; i < 80; i++) {
+
+        const c = document.createElement("div");
+
+        c.innerHTML = "🎉";
+
+        c.style.position = "fixed";
+        c.style.left = Math.random() * 100 + "vw";
+        c.style.top = "-20px";
+        c.style.fontSize = (18 + Math.random() * 20) + "px";
+        c.style.transition = "6s linear";
+
+        document.body.appendChild(c);
+
+        setTimeout(() => {
+            c.style.top = "110vh";
+        }, 50);
+
+        setTimeout(() => {
+            c.remove();
+        }, 6000);
+    }
+
+}
+
+/* ================= FIREWORKS ================= */
+
+function fireworks(){
+
+for(let i=0;i<40;i++){
+
+let star=document.createElement("div");
+
+star.innerHTML="✨";
+
+star.style.position="fixed";
+
+star.style.left=(40+Math.random()*20)+"vw";
+
+star.style.top=(20+Math.random()*30)+"vh";
+
+star.style.fontSize=(20+Math.random()*25)+"px";
+
+star.style.opacity="0";
+
+star.style.transition="all 1s";
+
+document.body.appendChild(star);
+
+setTimeout(()=>{
+
+star.style.opacity="1";
+
+star.style.transform="scale(2) rotate(360deg)";
+
+},50);
+
+setTimeout(()=>{
+
+star.remove();
+
+},1500);
+
+}
+
+}
+
+/* ================= Surprise Upgrade ================= */
+
+function showLove(){
+
+document.getElementById("surprise").style.display="block";
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+confetti();
+
+fireworks();
+
+alert("❤️ Happy Birthday Baby ❤️");
+
+}
+  /* ================= PREMIUM LOADER ================= */
+
+window.addEventListener("load", function(){
+
+const loader=document.createElement("div");
+
+loader.id="loader";
+
+loader.style.position="fixed";
+loader.style.left="0";
+loader.style.top="0";
+loader.style.width="100%";
+loader.style.height="100%";
+loader.style.background="#ff4f91";
+loader.style.display="flex";
+loader.style.justifyContent="center";
+loader.style.alignItems="center";
+loader.style.flexDirection="column";
+loader.style.color="white";
+loader.style.fontSize="32px";
+loader.style.fontFamily="Poppins";
+loader.style.zIndex="999999";
+
+loader.innerHTML="❤️ Loading Birthday Surprise... ❤️";
+
+document.body.appendChild(loader);
+
+setTimeout(()=>{
+loader.style.opacity="0";
+loader.style.transition="1s";
+setTimeout(()=>{
+loader.remove();
+},1000);
+},2500);
+
+});
+
+
+/* ================= ROSE PETALS ================= */
+
+function createRose(){
+
+const rose=document.createElement("div");
+
+rose.innerHTML="🌹";
+
+rose.style.position="fixed";
+
+rose.style.left=Math.random()*100+"vw";
+
+rose.style.top="-40px";
+
+rose.style.fontSize=(20+Math.random()*25)+"px";
+
+rose.style.transition="12s linear";
+
+rose.style.zIndex="999";
+
+document.body.appendChild(rose);
+
+setTimeout(()=>{
+
+rose.style.top="110vh";
+
+rose.style.transform="rotate(720deg)";
+
+},50);
+
+setTimeout(()=>{
+
+rose.remove();
+
+},12000);
+
+}
+
+setInterval(createRose,900);
+
+
+/* ================= CURSOR SPARKLES ================= */
+
+document.addEventListener("mousemove",function(e){
+
+const star=document.createElement("div");
+
+star.innerHTML="✨";
+
+star.style.position="fixed";
+
+star.style.left=e.clientX+"px";
+
+star.style.top=e.clientY+"px";
+
+star.style.pointerEvents="none";
+
+star.style.transition=".8s";
+
+document.body.appendChild(star);
+
+setTimeout(()=>{
+
+star.style.opacity="0";
+
+star.style.transform="scale(2)";
+
+},50);
+
+setTimeout(()=>{
+
+star.remove();
+
+},800);
+
+});
+
+
+/* ================= TYPEWRITER EFFECT ================= */
+
+const letter=document.querySelector(".letter");
+
+if(letter){
+
+const original=letter.innerHTML;
+
+letter.innerHTML="";
+
+let i=0;
+
+function type(){
+
+if(i<original.length){
+
+letter.innerHTML+=original.charAt(i);
+
+i++;
+
+setTimeout(type,12);
+
+}
+
+}
+
+setTimeout(type,1200);
+
+}
+
+
+/* ================= FINAL MESSAGE ================= */
+
+setTimeout(()=>{
+
+console.log("Happy Birthday Baby ❤️");
+
+},5000);
+    const reasons = [
+
+"You make me smile every day 😊",
+
+"You are my safe place ❤️",
+
+"Your laugh is my favorite sound 😍",
+
+"You care for me like no one else 💖",
+
+"You always understand me 🥹",
+
+"You make every moment special ✨",
+
+"You are beautiful inside and out 🌹",
+
+"You are my best friend ❤️",
+
+"You are my happiness ☀️",
+
+"And because... You are YOU ❤️"
+
+];
+
+let reasonIndex = 0;
+
+function showReasons(){
+
+document.getElementById("reasonBox").style.display="block";
+
+document.getElementById("reasonText").innerHTML=reasons[reasonIndex];
+
+reasonIndex++;
+
+if(reasonIndex>=reasons.length){
+
+reasonIndex=0;
+
+}
+
+confetti();
+
+fireworks();
+
+}
+</script>
+<!-- Birthday Cake -->
+<div id="cakeContainer">
+  <h2>🎂 Make a Wish Baby ❤️</h2>
+
+  <div id="cake">
+    <div class="candles">
+      <div class="candle" onclick="blow(this)">
+        <div class="flame"></div>
+      </div>
+
+      <div class="candle" onclick="blow(this)">
+        <div class="flame"></div>
+      </div>
+
+      <div class="candle" onclick="blow(this)">
+        <div class="flame"></div>
+      </div>
+    </div>
+
+    <div class="cake-top"></div>
+    <div class="cake-bottom"></div>
+  </div>
+
+  <p id="wishText">Tap all the candles to blow them out 🎉</p>
+</div>
+</body>
+
+</html>
